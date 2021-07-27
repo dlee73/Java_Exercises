@@ -1,4 +1,5 @@
 public class Dog{
+    private static Object Dog;
     public int size;
     public String name;
 
@@ -17,12 +18,32 @@ public class Dog{
             System.out.println("Aroooooo!");
         }
     }
-    public static void Barky(){
-        System.out.println("Woof Woof!");
+
+    public static boolean isBiggestOfFourDogs(Dog[] dogs, int i){
+        boolean isBiggest = true;
+        for (int j =-2; j <= 2; j++){
+
+        }
+    }
+
+    public static boolean validIndex(Dog[] dogs, int i){
+        if (i < 0){
+            return false;
+        }
+        if (i >= dogs.length){
+            return false;
+        }
+        return true;
     }
 
     public static Dog[] largerThanFourNeighbors(Dog[] dogs){
+        Dog[] returnDogs = new Dog[dogs.length];
+        int cnt = 0;
 
+        for (int i = 0; i < dogs.length; i++){
+            returnDogs[cnt] = dogs[i];
+            cnt++;
+        }
         return dogs;
     }
 
@@ -40,5 +61,7 @@ public class Dog{
                 new Dog(15),
                 new Dog(20),
         };
+
+        System.out.println(largerThanFourNeighbors(dogs));
     }
 }
